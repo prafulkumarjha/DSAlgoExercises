@@ -17,8 +17,6 @@ public class TreeTraversalClient {
 		root.left.left = new TreeNode(4);
 		root.left.right = new TreeNode(5);
 		root.right.left = new TreeNode(6);
-		//root.left.right.right = new TreeNode(14);
-		//root.right.left = new TreeNode(4);
 		root.right.right = new TreeNode(7);
 		System.out.println("PreOrder : ");
 		TreeTraversalService traversalService = new TreeTraversalService(root);
@@ -32,6 +30,6 @@ public class TreeTraversalClient {
 		System.out.println("InOrder : ");
 		traversalService.inOrder();
 		System.out.println("PostOrder : ");
-		traversalService.postOrder();
+		System.out.println(traversalService.postOrder().toString());
 }
 }
