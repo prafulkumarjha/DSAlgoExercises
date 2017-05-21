@@ -65,7 +65,7 @@ public class MaxElementLevelOfTree {
 		
 		
 			
-			int k = -1;
+			int k = 0;
 			while(true) {
 				int current_level_size = Q.size();
 				int i = 0;
@@ -77,7 +77,7 @@ public class MaxElementLevelOfTree {
 					Q.add(temp_node.right);
 			}
 			
-			k++;
+			
 			if(current_level_size > curr_max_element_size )
 			{
 				curr_max_element_size = current_level_size;
@@ -87,6 +87,7 @@ public class MaxElementLevelOfTree {
 			if(Q.isEmpty()) {
 				return level_with_max_element;
 			}
+			k++;
 		
 	}
 		
