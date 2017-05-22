@@ -30,6 +30,7 @@ public class MaxElementLevelOfTree {
 			elements_on_this_level++;
 			if(temp_node == null) // it's end of a level 
 			{
+				level++;
 				if(max_element_on_any_level < elements_on_this_level) {
 					max_element_on_any_level = elements_on_this_level;
 					max_element_level = level;
@@ -38,7 +39,7 @@ public class MaxElementLevelOfTree {
 				
 				if(!Q.isEmpty())
 				Q.add(null);
-				level++;
+				
 			} 
 			else {
 			if(temp_node.left != null){
@@ -76,7 +77,7 @@ public class MaxElementLevelOfTree {
 				if(temp_node.right != null)
 					Q.add(temp_node.right);
 			}
-			
+			k++;
 			
 			if(current_level_size > curr_max_element_size )
 			{
@@ -87,7 +88,7 @@ public class MaxElementLevelOfTree {
 			if(Q.isEmpty()) {
 				return level_with_max_element;
 			}
-			k++;
+			
 		
 	}
 		
