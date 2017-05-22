@@ -17,14 +17,18 @@ public class AllAncestorOfANode {
 		
 		if(node == null) 
 			return false;
-		if(node.data == 7)
-			System.out.println("7 node");
-		if(node.left == itemNode || node.right == itemNode || 
-				printAllAncestor(node.left, itemNode) || printAllAncestor(node.right, itemNode)) {
+		if(node.data == itemNode.data) 
+			return true;
+			///System.out.println("7 node");
+		if( printAllAncestor(node.left, itemNode) ) {
 			System.out.print(node.data+" ");
 			return true;
 		}
 		
+		if( printAllAncestor(node.right, itemNode) ) {
+			System.out.print(node.data+" ");
+			return true;
+		}
 		return false;
 	}
 }
