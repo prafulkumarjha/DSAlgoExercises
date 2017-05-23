@@ -16,13 +16,13 @@ public class LCAOfTreeNodes {
 	Stack<TreeNode> path1 = new Stack<TreeNode>();
 	Stack<TreeNode> path2 = new Stack<TreeNode>();
 	
-	public boolean getPath(TreeNode node, TreeNode targetNode, boolean isFirst) {
+	public boolean getPath(TreeNode node, int target, boolean isFirst) {
 		
 		if(node == null)
 			return false;
-		if(node == targetNode)
+		if(node.data == target)
 			return true;
-		if(getPath(node.left, targetNode,isFirst)) {
+		if(getPath(node.left, target,isFirst)) {
 			if(isFirst) {
 				path1.push(node);
 			} 
@@ -32,22 +32,37 @@ public class LCAOfTreeNodes {
 			return true;
 		}
 		
-		if(getPath(node.right, targetNode, isFirst)) {
+		if(getPath(node.right, target, isFirst)) {
 			if(isFirst) {
 				path1.push(node);
 			} 
 			else {
 				path2.push(node);
 			}
+			return true;
 		}
 		return false;
 	}
-	public TreeNode getLCA(TreeNode node1, TreeNode node2,TreeNode node) {
+	public TreeNode getLCA(int target2, int target1,TreeNode node) {
+		
+		
+		getPath(node, target1, true);
+		getPath(node, target2, false);
+		
+			if(path1.isEmpty())
+				return null;
+			if(path2.isEmpty()) 
+				return null;
+			TreeNode LCA_Node = null;
+			while(!path1.isEmpty() && !path2.isEmpty()) {
+				TreeNode temp_node1 = path1.pop();
+				TreeNode temp_node2 = path2.pop();
+				if(temp_node1 == temp_node2) 
+					LCA_Node = temp_node1;
+			}
 		
 		
 		
-		
-		
-		return null;
+		return LCA_Node;
 	}
 }

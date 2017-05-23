@@ -1,7 +1,7 @@
 package com.practice.trees.test;
 
 import com.practice.node.TreeNode;
-import com.practice.trees.services.AllAncestorOfANode;
+import com.practice.trees.services.LCAOfTreeNodes;
 
 public class LeastCommonAncestorClient {
 
@@ -16,8 +16,8 @@ public class LeastCommonAncestorClient {
 		//root.right.left = new TreeNode(4);
 		root.right.right = new TreeNode(7);
 		
-		AllAncestorOfANode ancestorNode = new AllAncestorOfANode(root);
-		ancestorNode.printAllAncestor(root, root.right.right);
+		LCAOfTreeNodes lca = new LCAOfTreeNodes(root);
+		System.out.println(lca.getLCA(4,5, root).data);
 		
 	}
 }
