@@ -17,7 +17,7 @@ public class LeastCommonAncestorClient {
 		root.right.right = new TreeNode(7);
 		
 		LCAOfTreeNodes lca = new LCAOfTreeNodes(root);
-		System.out.println(lca.getLCA(4,5, root).data);
+		System.out.println(lca.getLCA(2,4, root).data);
 		
 	}
 }

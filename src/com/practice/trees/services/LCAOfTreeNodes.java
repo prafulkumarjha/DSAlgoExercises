@@ -20,8 +20,15 @@ public class LCAOfTreeNodes {
 		
 		if(node == null)
 			return false;
-		if(node.data == target)
+		if(node.data == target){
+			if(isFirst) {
+				path1.push(node);
+			} 
+			else {
+				path2.push(node);
+			}
 			return true;
+		}
 		if(getPath(node.left, target,isFirst)) {
 			if(isFirst) {
 				path1.push(node);
