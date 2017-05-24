@@ -7,7 +7,6 @@
 metadata
 bin/
 RemoteSystemsTempFiles/
-.*
 /bin/
 /bin/
 /bin/
