@@ -52,5 +52,5 @@ public class Knapsack {
 	    System.out.println(knapSack(W, wt, val, n));
 	    }
 	
-	/*This code is contributed by Rajat Mishra */
+	
 }
