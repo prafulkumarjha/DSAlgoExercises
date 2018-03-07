@@ -16,7 +16,7 @@ public class LevelOfANodeInBinaryTree {
 	
 	public int getLevelOfNode(int element) {
 		
-		Queue<TreeNode> Q = new LinkedList<TreeNode>();
+		Queue<TreeNode> Q = new LinkedList<>();
 		Q.add(root);
 		int level = 0;
 		

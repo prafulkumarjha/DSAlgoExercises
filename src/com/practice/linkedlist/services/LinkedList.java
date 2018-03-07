@@ -30,7 +30,7 @@ public Node push(int new_data)
 
 
 // Utility function to print a linked list
-public void printList()
+public void printList(Node head)
 {
     Node temp = head;
     while(temp != null)

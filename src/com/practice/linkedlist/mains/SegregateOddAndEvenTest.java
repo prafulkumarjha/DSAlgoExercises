@@ -22,12 +22,12 @@ public class SegregateOddAndEvenTest {
     Node head = llist.push(0);
      
     System.out.println("Origional Linked List");
-    llist.printList();
+    llist.printList(head);
 
     SegregateOddAndEven oddEvenList = new SegregateOddAndEven(head);
     oddEvenList.segregateOddAndEven();
 
     System.out.println("Modified Linked List");
-    llist.printList();
+    llist.printList(head);
 	}
 }

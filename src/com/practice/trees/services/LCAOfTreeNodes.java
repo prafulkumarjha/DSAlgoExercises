@@ -13,8 +13,8 @@ public class LCAOfTreeNodes {
 		this.root = root;
 	}
 	
-	Stack<TreeNode> path1 = new Stack<TreeNode>();
-	Stack<TreeNode> path2 = new Stack<TreeNode>();
+	Stack<TreeNode> path1 = new Stack<>();
+	Stack<TreeNode> path2 = new Stack<>();
 	
 	public boolean getPath(TreeNode node, int target, boolean isFirst) {
 		
